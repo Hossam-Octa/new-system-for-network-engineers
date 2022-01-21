@@ -25,6 +25,17 @@ sudo apt -y install obs-studio filezilla gnome-todo gnome-shell-pomodoro anydesk
  caja-sendto caja-rename thunderbird dia openboard rhythmbox telegram-desktop\
  unzip atom putty putty-tools
 #===================================================================================================#
+# Software Folder
+#----------------#
+if [[ -d ./Software ]]; then
+  echo "Software folder was found!!"
+ else
+  echo "Software folder was not found!! :("
+  echo "Octa will creat it for you :)"
+  mkdir Software
+fi
+
+#===================================================================================================#
 # Install VMware
 #--------------#
 if [[ -f ./Software/VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle ]]; then

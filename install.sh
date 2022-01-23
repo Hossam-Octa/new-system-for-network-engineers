@@ -32,9 +32,8 @@ if [[ -d ./Software ]]; then
  else
   echo "Software folder was not found!! :("
   echo "Octa will creat it for you :)"
-  mkdir Software
+  mkdir ./Software
 fi
-
 #===================================================================================================#
 # Install VMware
 #--------------#
@@ -42,6 +41,12 @@ if [[ -f ./Software/VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle ]]; th
   cd ./Software
   sudo chmod +x VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle
   sudo ./VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle
+  echo " 
+    =====================================================================
+    
+            VMware Serial is: ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+    
+    ====================================================================="
  else
    echo "VMware not found :("
    echo "Don't worry octa will download it for you :)"
@@ -49,6 +54,12 @@ if [[ -f ./Software/VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle ]]; th
    wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle
    sudo chmod +x VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle
    sudo ./VMware-Workstation-Full-16.2.1-18811642.x86_64.bundle
+   echo " 
+    =====================================================================
+    
+            VMware Serial is: ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+    
+    ====================================================================="
 fi
 #===================================================================================================#
 # Install skype
@@ -130,6 +141,8 @@ fi
 if [[ -d ./Themes/Icons/Tela-circle-icon-theme-master ]]; then
   cd ./Themes/Icons/Tela-circle-icon-theme-master
   sudo ./install.sh
+  echo
+  echo "This beautiful theme made by 'Vince' from https://github.com/vinceliuice/Tela-icon-theme give him a respect"
 else
   unzip ./Themes/Icons/Tela-circle-icon-theme-master.zip
   cd ./Themes/Icons/Tela-circle-icon-theme-master
@@ -140,6 +153,8 @@ fi
 if [[ -d ./Themes/GRUB/grub2-themes-master ]]; then
   cd ./Themes/GRUB/grub2-themes-master
   sudo ./install.sh
+  echo
+  echo "This beautiful theme made by 'Vince' from https://github.com/vinceliuice/grub2-themes give him a respect"
 else
   unzip ./Themes/GRUB/grub2-themes-master.zip
   cd ./Themes/GRUB/grub2-themes-master
@@ -150,6 +165,8 @@ fi
 if [[ -d ./Themes/GTK/Orchis-theme-master ]]; then
   cd ./Themes/GTK/Orchis-theme-master
   sudo ./install.sh
+  echo
+  echo "This beautiful theme made by 'Vince' from https://github.com/vinceliuice/Orchis-theme/ give him a respect"
 else
   unzip ./Themes/GTK/Orchis-theme-master.zip
   cd ./Themes/GTK/Orchis-theme-master

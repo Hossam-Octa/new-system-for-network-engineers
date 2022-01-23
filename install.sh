@@ -92,7 +92,9 @@ if [[ -f ./Software/CiscoPacketTracer_810_Ubuntu_64bit.deb ]]; then
  echo "Cisco Packet Tracer not found :("
  echo "Don't worry octa will download it for you :)"
  cd ./Software
- #Packet tracer github url
+ wget https://archive.org/download/packet-tracer-800-build-212-mac-notarized/PacketTracer_800_amd64_build212_final.deb
+ sudo chmod +x PacketTracer_800_amd64_build212_final.deb
+ sudo dpkg -i ./Software/PacketTracer_800_amd64_build212_final.deb
 fi
 #===================================================================================================#
 # Install FreeDownloadManager
@@ -126,6 +128,8 @@ if [[ -d /usr/share/icons/WhiteSur-cursors ]]; then
       if [[ -d ./Themes/Cursors/WhiteSur-cursors-master ]]; then
         cd ./Themes/Cursors/WhiteSur-cursors-master
         sudo ./install.sh
+        echo
+        echo "This beautiful theme made by 'Vince' from https://github.com/vinceliuice/WhiteSur-cursors give him a respect"
       else
         unzip ./Themes/Cursors/WhiteSur-cursors-master.zip
         sudo ./Themes/Cursors/WhiteSur-cursors-master/install.sh
